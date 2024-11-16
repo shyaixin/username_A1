@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // 第3部分-使用类和对象（已包含在第3部分中，这里不再重复）
+
+        // 第5部分-预约集合
+        ArrayList<Appointment> appointments = new ArrayList<>();
+
+        // 创建预约
+        createAppointment(appointments, "Patient A", "1234567890", "08:00", gp1);
+        createAppointment(appointments, "Patient B", "0987654321", "10:00", ohp1);
+        createAppointment(appointments, "Patient C", "1122334455", "14:30", gp2);
+        createAppointment(appointments, "Patient D", "6677889900", "08:00", ohp2);
+
+        // 打印现有预约
+        printExistingAppointments(appointments);
+
+        // 取消一个预约
+        cancelBooking(appointments, "0987654321");
+
+        // 再次打印现有预约以演示更新的预约集合
+        printExistingAppointments(appointments);
+
+        System.out.println("---------------------");
+    }
+
+    // 创建新的预约并将其添加到ArrayList中
+    public static void createAppointment(ArrayList<Appointment> appointments, String patientName, String patientPhone, String preferredTimeSlot, HealthProfessional healthProfessional) {
+        Appointment appointment = new Appointment(patientName, patientPhone, preferredTimeSlot, healthProfessional);
+        appointments.add(appointment);
+    }
+
+    // 打印数组列表中的现有预约
+    public static void printExistingAppointments(ArrayList<Appointment> appointments) {
+        if (appointments.isEmpty()) {
+            System.out.println("No existing appointments.");
+        } else {
+            for (Appointment appointment : appointments) {
+                appointment.printAppointmentDetails();
+                System.out.println("---------------------");
+            }
+        }
+    }
+
+    // 使用患者的移动电话取消预约
+    public static void cancelBooking(ArrayList<Appointment> appointments

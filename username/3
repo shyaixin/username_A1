@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        // 第3部分-使用类和对象
+        GeneralPractitioner gp1 = new GeneralPractitioner(1, "Dr. Smith", "General Practitioner Description", "Family Medicine");
+        GeneralPractitioner gp2 = new GeneralPractitioner(2, "Dr. Johnson", "Another General Practitioner", "Internal Medicine");
+        GeneralPractitioner gp3 = new GeneralPractitioner(3, "Dr. Brown", "Third General Practitioner", "Pediatrics");
+
+        OtherHealthProfessional ohp1 = new OtherHealthProfessional(4, "Dr. Lee", "Physiotherapist Description", "Physical Therapy");
+        OtherHealthProfessional ohp2 = new OtherHealthProfessional(5, "Dr. Wang", "Occupational Therapist", "Occupational Therapy");
+
+        gp1.printHealthProfessionalDetails();
+        gp2.printHealthProfessionalDetails();
+        gp3.printHealthProfessionalDetails();
+        ohp1.printHealthProfessionalDetails();
+        ohp2.printHealthProfessionalDetails();
+
+        System.out.println("---------------------");
+    }
+}

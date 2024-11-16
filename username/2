@@ -1,0 +1,61 @@
+public class GeneralPractitioner extends HealthProfessional {
+    private String specialization;
+
+    // 默认构造函数
+    public GeneralPractitioner() {
+        super();
+    }
+
+    // 第二个构造函数
+    public GeneralPractitioner(int ID, String name, String description, String specialization) {
+        super(ID, name, description);
+        this.specialization = specialization;
+    }
+
+    // 打印健康专家详细信息的方法
+    public void printHealthProfessionalDetails() {
+        super.printDetails();
+        System.out.println("Type: General Practitioner");
+        System.out.println("Specialization: " + specialization);
+    }
+
+    // Getter 和 Setter 方法
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+}
+
+public class OtherHealthProfessional extends HealthProfessional {
+    private String areaOfExpertise;
+
+    // 默认构造函数
+    public OtherHealthProfessional() {
+        super();
+    }
+
+    // 第二个构造函数
+    public OtherHealthProfessional(int ID, String name, String description, String areaOfExpertise) {
+        super(ID, name, description);
+        this.areaOfExpertise = areaOfExpertise;
+    }
+
+    // 打印健康专家详细信息的方法
+    public void printHealthProfessionalDetails() {
+        super.printDetails();
+        System.out.println("Type: Other Health Professional");
+        System.out.println("Area of Expertise: " + areaOfExpertise);
+    }
+
+    // Getter 和 Setter 方法
+    public String getAreaOfExpertise() {
+        return areaOfExpertise;
+    }
+
+    public void setAreaOfExpertise(String areaOfExpertise) {
+        this.areaOfExpertise = areaOfExpertise;
+    }
+}

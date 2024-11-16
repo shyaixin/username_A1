@@ -1,0 +1,60 @@
+public class Appointment {
+    private String patientName;
+    private String patientPhone;
+    private String preferredTimeSlot;
+    private HealthProfessional healthProfessional;
+
+    // 默认构造函数
+    public Appointment() {
+    }
+
+    // 第二个构造函数
+    public Appointment(String patientName, String patientPhone, String preferredTimeSlot, HealthProfessional healthProfessional) {
+        this.patientName = patientName;
+        this.patientPhone = patientPhone;
+        this.preferredTimeSlot = preferredTimeSlot;
+        this.healthProfessional = healthProfessional;
+    }
+
+    // 打印所有实例变量的方法
+    public void printAppointmentDetails() {
+        System.out.println("Patient Name: " + patientName);
+        System.out.println("Patient Phone: " + patientPhone);
+        System.out.println("Preferred Time Slot: " + preferredTimeSlot);
+        System.out.println("Health Professional:");
+        healthProfessional.printDetails();
+    }
+
+    // Getter 和 Setter 方法
+    public String getPatientName() {
+        return patientName;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+
+    public String getPatientPhone() {
+        return patientPhone;
+    }
+
+    public void setPatientPhone(String patientPhone) {
+        this.patientPhone = patientPhone;
+    }
+
+    public String getPreferredTimeSlot() {
+        return preferredTimeSlot;
+    }
+
+    public void setPreferredTimeSlot(String preferredTimeSlot) {
+        this.preferredTimeSlot = preferredTimeSlot;
+    }
+
+    public HealthProfessional getHealthProfessional() {
+        return healthProfessional;
+    }
+
+    public void setHealthProfessional(HealthProfessional healthProfessional) {
+        this.healthProfessional = healthProfessional;
+    }
+}
